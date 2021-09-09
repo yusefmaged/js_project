@@ -121,7 +121,7 @@ window.onload = function () {
         } else document.getElementById('lpBtn').style.visibility = 'visibility'
     }
     
-    function startTimer(duration = 4, display = document.querySelector('#timer')) {
+    function startTimer(duration = 7, display = document.querySelector('#timer')) {
         let timer = duration, minutes, seconds;
         time = setInterval(function () {
             minutes = parseInt(timer / 60, 10)
@@ -523,7 +523,7 @@ window.onload = function () {
 
     function createRules() {
         let rules = document.createElement("h4")
-        let text = document.createTextNode("You have 10 seconds to score as high as you can in a game of 'Pick the Color, Not the Word'. These points will contribute to your total score. Then you'll play a game of trivia. Each question will be worth 100 points. If you reach 1000 points before the timer runs out, you win!")
+        let text = document.createTextNode("You have 8 seconds to score as high as you can in a game of 'Pick the Color, Not the Word'. These points will contribute to your total score. Then you'll play a game of trivia. If you answer the trivia question correctly 100 points will be added to your score. If you get it wrong, 100 gets taken away. When you reach 1000 total points, you win! If you hit 0, you lose.")
         let body = document.getElementsByTagName("body")[0];
         rules.setAttribute("id", "rules")
         body.appendChild(rules);
