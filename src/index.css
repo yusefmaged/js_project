@@ -1,0 +1,148 @@
+html, body, {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+body {
+  background-color: #005689;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 200px;
+}
+
+p {
+  display: none
+}
+
+h1 {
+  /* color: #ff895d;
+  font-family: "Bubblegum Sans";
+  display: flex; */
+
+}
+
+#points {
+  display: none
+}
+
+img {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+#game span {
+  margin: 0
+}
+
+h1 {
+  animation: pop 3s ease-in-out;
+}
+.with-delay {
+  animation-delay: 5s;
+}
+
+h1 {
+  /* /* position: absolute; */
+  transform-origin: right;
+  /* left: 1%; */
+  animation-name: bounce;
+  animation-fill-mode: both;
+  animation-duration: 1.5s;
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    transform: translateY(-3000px) rotate(45deg);
+  }
+  90% {
+    opacity: 1;
+    transform: scaleY(5) translateY(1000px) rotate(45deg);
+  }
+  100% {
+    transform: scaleY(1000) translateY(1000) rotate(90deg);
+  }
+}
+
+#correctAnswer {
+
+  background-color: black;
+
+}
+
+#play {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#play {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: orange;
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+
+#play::after {
+  content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+  
+}
+
+#play:hover::after, #play:focus::after {
+  animation: none;
+  display: none;
+}
+
+#play:focus {
+  animation: fadeOut 2s;
+  opacity: 0;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+#mainTitle:hover img{
+  margin-top:-200px;
+  -webkit-transition: margin 1s;
+  -moz-transition: margin 1s;
+  transition: margin 1s;
+}
