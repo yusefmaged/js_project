@@ -52,7 +52,7 @@ table {
 }
 
 body {
-  background-image: url("../Clock.png");
+  background-image: url("../../Clock.png");
   background-size: 1500px 800px;
   display: flex;
   flex-direction: column;
