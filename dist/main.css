@@ -52,7 +52,7 @@ table {
 }
 
 body {
-  background-image: url("/clock.jpeg");
+  background-image: url("/clock.png");
   background-repeat: no-repeat;
   background-size: 1500px 800px;
   display: flex;
