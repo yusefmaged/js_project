@@ -388,19 +388,19 @@ window.onload = function () {
 
         let orangeBtn = document.createElement("button")
         orangeBtn.setAttribute("id", "orange")
-        orangeBtn.innerHTML = "Orange"
+        orangeBtn.innerHTML = ""
 
         let greenBtn = document.createElement("button")
         greenBtn.setAttribute("id", "green")
-        greenBtn.innerHTML = "Green"
+        greenBtn.innerHTML = ""
 
         let redBtn = document.createElement("button")
         redBtn.setAttribute("id", "red")
-        redBtn.innerHTML = "Red"
+        redBtn.innerHTML = ""
 
         let blueBtn = document.createElement("button")
         blueBtn.setAttribute("id", "blue")
-        blueBtn.innerHTML = "Blue"
+        blueBtn.innerHTML = ""
 
         let a = document.getElementById("A");
         a.appendChild(orangeBtn);
