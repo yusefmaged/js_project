@@ -649,8 +649,10 @@ window.onload = function () {
         let number = parseInt(points.innerHTML)
         if (number === 1000) {
             window.location.reload()
+            alert("You win!")
         } else if (number === 0 || number < 0) {
             window.location.reload()
+            alert("You lose!")
         }
     }
 }
