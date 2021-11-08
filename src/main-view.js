@@ -183,7 +183,12 @@ window.onload = function () {
         const incorrectAnswer2 = document.querySelector("#incorrectAnswer2")
         const incorrectAnswer3 = document.querySelector("#incorrectAnswer3")
 
-        if (displayResult[0][0].includes("&")) displayResult.shift()
+        if (displayResult[0][0].includes("&") || displayResult[0][1].includes("&") || displayResult[0][2][0].includes("&") || displayResult[0][2][1].includes("&") || displayResult[0][2][2].includes("&")) displayResult.shift()
+        // if (displayResult[0][1].includes("&")) displayResult.shift()
+        // if (displayResult[0][2][0].includes("&")) displayResult.shift()
+        // if (displayResult[0][2][1].includes("&")) displayResult.shift()
+        // if (displayResult[0][2][2].includes("&")) displayResult.shift()
+
 
         question.textContent = displayResult[0][0]
         correctAnswer.textContent = displayResult[0][1]

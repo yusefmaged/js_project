@@ -1,111 +1,154 @@
-html, body {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+
+/*!************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.css ***!
+  \************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lekton:ital@1&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  height: 100%;
+  overflow: hidden;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 body {
-  background-color: #005689;
+  background-image: url("clock.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-top: 200px;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
 }
 
 p {
-  display: none
-}
-
-h1 {
-  /* color: #ff895d;
-  font-family: "Bubblegum Sans";
-  display: flex; */
-
+  display: none;
 }
 
 #points {
-  display: none
+  position: absolute;
+
+  font-size: 67px;
+  color: darkblue;
+  font-weight: bolder;
+  padding-top: 30px;
 }
+
 
 img {
-  max-width: 600px;
-  max-height: 600px;
+    padding-top: 100px;
+    display: block;
+    margin-left: 500px ;
+    height: 275px;
+    width: 650px;
+    position: relative;
+    justify-content: center;
 }
 
-#game span {
-  margin: 0
+#rules {
+  margin-top: 100px;
+  margin-right: 200px;
+  margin-left: 500px;
+
+  text-align: center;
+  color: black;
+  font-weight: bold;
 }
 
-h1 {
-  animation: pop 3s ease-in-out;
-}
-.with-delay {
-  animation-delay: 5s;
-}
 
-h1 {
-  /* /* position: absolute; */
-  transform-origin: right;
-  /* left: 1%; */
-  animation-name: bounce;
-  animation-fill-mode: both;
-  animation-duration: 1.5s;
-}
-
-@keyframes bounce {
+/* @keyframes bounce {
   0% {
     opacity: 0;
     transform: translateY(-3000px) rotate(45deg);
   }
   90% {
     opacity: 1;
-    transform: scaleY(5) translateY(1000px) rotate(45deg);
+    transform: scaleY(5) translateY(200px) rotate(45deg);
   }
   100% {
     transform: scaleY(1000) translateY(1000) rotate(90deg);
   }
-}
-
+} */
 #correctAnswer {
-
   background-color: black;
-
 }
 
 #play {
-  height: 100%;
-  display: flex;
+  max-height: 100%;
   align-items: center;
   justify-content: center;
+  position: relative;
+  margin-bottom: 200px;
+  margin-left: 500px;
 }
 
 #play {
-  min-width: 300px;
-  min-height: 60px;
-  font-family: 'Nunito', sans-serif;
+  width: 300px;
+  max-height: 100px;
+  font-family: "Nunito", sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #313133;
   background: orange;
-  border: none;
+  border: black;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+  box-shadow: 12px 12px 24px lightblue;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
-  position: relative;
   padding: 10px;
-  }
+}
 
 #play::after {
-  content: '';
-  width: 30px; height: 30px;
+  content: "";
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
   border: 6px solid #00FFCB;
   position: absolute;
@@ -114,7 +157,6 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
-  
 }
 
 #play:hover::after, #play:focus::after {
@@ -140,9 +182,403 @@ h1 {
   }
 }
 
-#mainTitle:hover img{
-  margin-top:-200px;
+/* #play:hover img {
+  margin-top: -200px;
   -webkit-transition: margin 1s;
   -moz-transition: margin 1s;
   transition: margin 1s;
+} */
+
+/* h1 {
+  width: 200px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+} */
+
+#game {
+  /* display: block;
+  justify-content: center;
+  align-items: ;
+  /* margin-top: auto; */
+  position: relative;
+  padding: 50px 100px 50px 100px;
+  margin-top: 60px;
+  margin-bottom: 90px;
+  font-size: 75px;
+  background-color: white;
+  width: auto;
+  height: auto;
+  text-align: center;
+  order: -2;
+  margin-left: 400px;
+}
+
+#gameTitle {
+  order: -3;
+  font-family: 'Lekton', sans-serif;
+  font-weight: bold;
+  font-size: xx-large;
+  color: orange;
+  width: auto;
+  height: auto;
+}
+
+/* h4 {
+  position: relative;
+  z-index: -1;
+  margin-top: -300px;
+  margin-bottom: 20px;
+  position: fixed;
+  text-align: center;
+  margin-right: 100px;
+  margin-left: 100px;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Special+Elite&display=swap');
+h4 {
+  font-family: 'Lekton', sans-serif;
+  font-size: 40px;
+  color: orange;
+}
+
+/* #gameBtn {
+    position: relative;
+    z-index: 1;
+    margin-top: -2px;
+} */
+
+#gameBtn {
+  max-height: 100%;
+  display: table;
+  margin-top: auto;
+  margin-bottom: 100px;
+  margin-left: 300px;
+}
+
+#gameBtn {
+  width: 300px;
+  max-height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: orange;
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+#gameBtn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+#gameBtn:hover::after, #gameBtn:focus::after {
+  animation: none;
+  display: none;
+}
+
+#gameBtn:focus {
+  animation: fadeOut 2s;
+  opacity: 0;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+#timer {
+  font-size: xx-large;
+  padding-right: 10px;
+  margin-left: 220px;
+}
+
+#A {
+  margin: 0px auto;
+  width: 600px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-row: auto auto;
+  grid-column-gap: 200px;
+  grid-row-gap: 20px;
+  margin-right: 200px;
+}
+
+button#orange,
+        button#green,
+        button#red,
+        button#blue {
+            grid-row: auto;
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            height: 75px;
+            font-size: 25px;
+        }
+
+        button#orange{
+            background:rgb(223, 117, 20);
+            /* this is a green */
+        }
+
+        button#green{
+            background: rgb(28, 184, 65);
+            /* this is a maroon */
+        }
+
+        button#red{
+            background: rgb(202, 60, 60);
+            /* this is an orange */
+        }
+
+        button#blue {
+            background: rgb(66, 184, 221);
+            /* this is a light blue */
+        }
+
+@import url('https://fonts.googleapis.com/css2?family=Lekton:wght@700&display=swap');
+
+#timer {
+    font-family: 'Lekton', sans-serif;
+    font-weight: bold;
+}
+
+#timer {
+  position: absolute;
+  top: 94%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  font-family: "Righteous", cursive;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+}
+
+@for $i from 1 through 4 {
+  .hello:nth-of-type(#{$i}) {
+    animation-duration: 2s;
+    animation-delay: 0.8s - ($i / 4);
+  }
+}
+
+@keyframes wave {
+  40%,
+  50% {
+    transform: translate(-50%, -65%) scale(1.05);
+  }
+
+  0%,
+  90%,
+  100% {
+    transform: translate(-50%, -45%) scale(0.95);
+  }
+}
+
+
+#triviaBtn {
+  width: 300px;
+  height: 100px;
+  margin-left: 450px;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #313133;
+  background: orange;
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+}
+
+#triviaBtn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 6px solid #00FFCB;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.5s infinite;
+}
+
+#triviaBtn:hover::after, #play:focus::after {
+  animation: none;
+  display: none;
+}
+
+#triviaBtn:focus {
+  animation: fadeOut 2s;
+  opacity: 0;
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+#trivia {
+  padding-bottom: -200px;
+}
+
+#answers {
+  padding-top: 20px;
+  padding-bottom: 300px;
+  margin-bottom: 0px auto;
+  margin-left: 400px;
+  width: 525px;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-row: auto auto;
+  grid-column-gap: 200px;
+  grid-row-gap: 20px;
+}
+
+#correctAnswer,
+#incorrectAnswer1,
+#incorrectAnswer2,
+#incorrectAnswer3 {grid-row: auto;
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            height: 75px;
+            font-size: 25px;
+        }
+
+        #correctAnswer{
+            background: rgb(28, 184, 65);
+            /* this is a green */
+        }
+
+        #incorrectAnswer1{
+            background: rgb(202, 60, 60);
+            /* this is a maroon */
+        }
+
+        #incorrectAnswer2 {
+            background: rgb(223, 117, 20);
+            /* this is an orange */
+        }
+
+        #incorrectAnswer3 {
+            background: rgb(66, 184, 221);
+            /* this is a light blue */
+        }
+
+#question {
+  font-family: 'Lekton', sans-serif;
+  font-weight: 800;
+  color: darkblue;
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  order: -1;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  margin-left: 400px;
+}
+
+#trivTitle {
+  font-family: 'Lekton', sans-serif;
+  order: -2;
+  margin-top: 100px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  
+}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
 }
